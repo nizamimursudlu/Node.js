@@ -4,13 +4,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <title>Weather App</title>
 </head>
 
-<body>
+<body style="text-align: center; width: 70%; margin: 0 auto;">
   <form action="/weather" method="POST">
-    <input type="text" name="cityName">
-    <button type="submit">Submit</button>
+    <input placeholder="Enter a City" type="text" name="cityName" style="margin-bottom: 20px;">
+    <button aria-placeholder="Enter a City" class="btn waves-effect waves-light" type="submit" name="action">Submit
+      <i class="material-icons right">send</i>
+    </button>
+    <p>{{ weatherText }}</p>
   </form>
 </body>
 
