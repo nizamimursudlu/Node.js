@@ -43,9 +43,10 @@ function drawCard(subjectValue, punchlineValue) {
   console.log(template({ cardData }))
 }
 function getRandomElement(array1, array2) {
-  const randomNum = Math.floor(Math.random() * array1.length)
-  const element1 = array1[randomNum]
-  const element2 = array2[randomNum]
+  const randomNum1 = Math.floor(Math.random() * array1.length)
+  const randomNum2 = Math.floor(Math.random() * array2.length)
+  const element1 = array1[randomNum1]
+  const element2 = array2[randomNum2]
   drawCard(element1, element2)
 }
 getRandomElement(subjects, punchlines)
